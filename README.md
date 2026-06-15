@@ -2,70 +2,120 @@
 
 ## Project Overview
 
-This project uses Machine Learning (K-Means Clustering) to segment customers based on their annual income and spending behavior. The goal is to identify different customer groups and provide marketing recommendations.
+This project uses Machine Learning (K-Means Clustering) to segment customers based on their annual income and spending behavior. The analysis helps businesses identify different customer groups and create targeted marketing strategies.
 
-## Objectives
+---
 
-- Understand customer behavior
-- Identify high-value customers
-- Discover spending patterns
-- Support targeted marketing strategies
-- Improve customer retention
+## Features
 
-## Dataset
+✅ Data Cleaning and Preprocessing
 
-Mall Customers Dataset
+✅ Missing Value Analysis
 
-Features:
-- Customer ID
-- Gender
-- Age
-- Annual Income (k$)
-- Spending Score (1-100)
+✅ Duplicate Record Removal
 
-## Data Preprocessing
+✅ Gender Encoding
 
-- Missing value analysis
-- Duplicate removal
-- Gender encoding
-- Feature scaling using StandardScaler
+✅ Feature Scaling using StandardScaler
+
+✅ Customer Segmentation using K-Means Clustering
+
+✅ Elbow Method for Optimal Cluster Selection
+
+✅ Static Dashboard using Matplotlib
+
+✅ Interactive Dashboard using Plotly
+
+✅ Business Insights and Marketing Recommendations
+
+---
+
+## Key Analysis Performed
+
+- Customer Demographics Analysis
+- Income Distribution Analysis
+- Spending Behavior Analysis
+- Cluster Identification
+- Customer Group Comparison
+- Marketing Strategy Recommendations
+
+---
 
 ## Machine Learning Technique
 
 ### K-Means Clustering
 
-- Elbow Method used to find optimal K
-- K = 5 selected
-- Customers grouped into 5 segments
+The project uses K-Means Clustering to divide customers into meaningful groups based on:
 
-## Dashboard Features
+- Annual Income (k$)
+- Spending Score (1–100)
 
-### Static Dashboard
+### Elbow Method
+
+The Elbow Method is used to determine the optimal number of clusters.
+
+**Optimal Clusters (K): 5**
+
+---
+
+## Dashboard Components
+
+### Static Dashboard (Matplotlib)
+
 - Elbow Method Analysis
 - Customer Cluster Visualization
 - Gender Distribution by Cluster
 - Average Age, Income and Spending Analysis
 
-### Interactive Dashboard
-- Cluster Scatter Plot
-- Elbow Curve
+### Interactive Dashboard (Plotly)
+
+- Interactive Customer Cluster Scatter Plot
+- Interactive Elbow Curve
 - Cluster Size Distribution
-- Income & Spending Comparison
+- Income and Spending Comparison
+
+---
+
+## Customer Segments Identified
+
+### 💎 High Income, High Spender
+Premium customers with high purchasing power.
+
+### 💰 High Income, Low Spender
+Potential customers who can be targeted with promotions.
+
+### 🛍️ Low Income, High Spender
+Frequent buyers who respond well to discounts.
+
+### 💤 Low Income, Low Spender
+Low-priority customer segment.
+
+### 👥 Average Customers
+Regular customers with moderate spending behavior.
+
+---
 
 ## Business Insights
 
-- High Income, High Spender Customers
-- High Income, Low Spender Customers
-- Low Income, High Spender Customers
-- Low Income, Low Spender Customers
-- Average Customers
+The analysis identifies:
+
+- High-value customers
+- Potential loyal customers
+- Customer spending patterns
+- Customer income distribution
+- Target groups for marketing campaigns
+
+---
 
 ## Marketing Recommendations
 
-- VIP loyalty programs
-- Personalized promotions
-- Discount campaigns
-- Customer retention strategies
+- VIP Loyalty Programs
+- Personalized Offers
+- Discount Campaigns
+- Customer Retention Strategies
+- Premium Product Promotions
+
+---
 
 ## Technologies Used
 
@@ -76,10 +126,37 @@ Features:
 - Matplotlib
 - Plotly
 
+---
+
+## Dataset
+
+Mall Customers Dataset
+
+Columns:
+
+- Customer ID
+- Gender
+- Age
+- Annual Income (k$)
+- Spending Score (1–100)
+
+---
+
 ## Dashboard Preview
 
-![Customer Segmentation](images/segmentation_dashboard_static.png)
+![Customer Segmentation Dashboard](images/segmentation_dashboard_static.png)
+
+---
+
+## Files
+
+- customer_segmentation.py
+- segmentation_dashboard_interactive.html
+- segmentation_dashboard_static.png
+- Mall_Customers.csv
+
+---
 
 ## Author
 
-Yug H K
+**Yug H K**
