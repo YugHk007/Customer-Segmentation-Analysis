@@ -10,7 +10,9 @@ from sklearn.preprocessing import StandardScaler
 import warnings
 warnings.filterwarnings("ignore")
 
+
 # STEP 1 — LOAD DATA
+
 df = pd.read_csv("Mall_Customers.csv")
 
 print("=" * 50)
@@ -22,7 +24,9 @@ print(f"\nFirst 5 rows:")
 print(df.head())
 print(f"\nColumn names: {list(df.columns)}")
 
+
 # STEP 2 — DATA CLEANING & PREPROCESSING
+
 print("\n" + "=" * 50)
 print("STEP 2: DATA CLEANING")
 print("=" * 50)
@@ -55,7 +59,7 @@ print("STEP 3: DATA EXPLORATION")
 print("=" * 50)
 print(df[["Age", "Income", "SpendingScore"]].describe().round(2))
 
-
+\
 # STEP 4 — FIND BEST K USING ELBOW METHOD
 
 print("\n" + "=" * 50)
@@ -95,15 +99,15 @@ centers = scaler.inverse_transform(kmeans.cluster_centers_)
 cluster_labels = {}
 for i, (income, spending) in enumerate(centers):
     if income >= 70 and spending >= 60:
-        cluster_labels[i] = "High Income, High Spender"
+        cluster_labels[i] = "High Income, High Spender 💎"
     elif income >= 70 and spending < 40:
-        cluster_labels[i] = "High Income, Low Spender"
+        cluster_labels[i] = "High Income, Low Spender 💰"
     elif income < 40 and spending >= 60:
-        cluster_labels[i] = "Low Income, High Spender"
+        cluster_labels[i] = "Low Income, High Spender 🛍️"
     elif income < 40 and spending < 40:
-        cluster_labels[i] = "Low Income, Low Spender"
+        cluster_labels[i] = "Low Income, Low Spender 💤"
     else:
-        cluster_labels[i] = "Average Customer"
+        cluster_labels[i] = "Average Customer 👥"
 
 df["Cluster_Label"] = df["Cluster"].map(cluster_labels)
 
@@ -290,7 +294,7 @@ fig2.add_trace(
 )
 
 fig2.update_layout(
-    title=dict(text=" Customer Segmentation Dashboard", font=dict(size=20), x=0.5),
+    title=dict(text="🛍️ Customer Segmentation Dashboard", font=dict(size=20), x=0.5),
     height=780,
     barmode="group",
     plot_bgcolor="white",
@@ -324,13 +328,12 @@ for label, group in df.groupby("Cluster_Label"):
 print("\n" + "=" * 50)
 print("MARKETING RECOMMENDATIONS")
 print("=" * 50)
-print(" High Income, High Spender → VIP loyalty programs, premium products")
-print(" High Income, Low Spender  → Targeted offers, convince them to spend more")
-print(" Low Income, High Spender  → Budget deals, discounts, EMI options")
-print(" Low Income, Low Spender   → Low priority, basic engagement only")
-print(" Average Customer          → General promotions, standard campaigns")
+print("💎 High Income, High Spender → VIP loyalty programs, premium products")
+print("💰 High Income, Low Spender  → Targeted offers, convince them to spend more")
+print("🛍️  Low Income, High Spender  → Budget deals, discounts, EMI options")
+print("💤 Low Income, Low Spender   → Low priority, basic engagement only")
+print("👥 Average Customer          → General promotions, standard campaigns")
 
 print("\nFiles created:")
 print("  segmentation_dashboard_static.png")
 print("  segmentation_dashboard_interactive.html")
-
