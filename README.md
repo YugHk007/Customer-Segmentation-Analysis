@@ -78,20 +78,20 @@ The Elbow Method is used to determine the optimal number of clusters.
 
 ## Customer Segments Identified
 
-### 💎 High Income, High Spender
+### High Income, High Spender
 Premium customers with high purchasing power.
 
-### 💰 High Income, Low Spender
+### High Income, Low Spender
 Potential customers who can be targeted with promotions.
 
-### 🛍️ Low Income, High Spender
+### Low Income, High Spender
 Frequent buyers who respond well to discounts.
 
-### 💤 Low Income, Low Spender
+### Low Income, Low Spender
 Low-priority customer segment.
 
-### 👥 Average Customers
-Regular customers with moderate spending behavior.
+### Average Customers
+Reg ular customers with moderate spending behavior.
 
 ---
 
