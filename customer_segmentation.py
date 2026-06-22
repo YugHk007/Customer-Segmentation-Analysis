@@ -1,8 +1,3 @@
-# ============================================================
-#  PROJECT 2 — Customer Segmentation Analysis
-#  Tools: Pandas, Scikit-learn (KMeans), Matplotlib, Plotly
-# ============================================================
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,9 +10,7 @@ from sklearn.preprocessing import StandardScaler
 import warnings
 warnings.filterwarnings("ignore")
 
-# ------------------------------------------------------------
 # STEP 1 — LOAD DATA
-# ------------------------------------------------------------
 df = pd.read_csv("Mall_Customers.csv")
 
 print("=" * 50)
@@ -29,9 +22,7 @@ print(f"\nFirst 5 rows:")
 print(df.head())
 print(f"\nColumn names: {list(df.columns)}")
 
-# ------------------------------------------------------------
 # STEP 2 — DATA CLEANING & PREPROCESSING
-# ------------------------------------------------------------
 print("\n" + "=" * 50)
 print("STEP 2: DATA CLEANING")
 print("=" * 50)
@@ -56,17 +47,17 @@ print(f"Income range  : {df['Income'].min()}k - {df['Income'].max()}k")
 print(f"Spending range: {df['SpendingScore'].min()} - {df['SpendingScore'].max()}")
 print("\nData cleaning complete!")
 
-# ------------------------------------------------------------
+
 # STEP 3 — EXPLORE THE DATA
-# ------------------------------------------------------------
+
 print("\n" + "=" * 50)
 print("STEP 3: DATA EXPLORATION")
 print("=" * 50)
 print(df[["Age", "Income", "SpendingScore"]].describe().round(2))
 
-# ------------------------------------------------------------
+
 # STEP 4 — FIND BEST K USING ELBOW METHOD
-# ------------------------------------------------------------
+
 print("\n" + "=" * 50)
 print("STEP 4: FINDING BEST NUMBER OF CLUSTERS (ELBOW METHOD)")
 print("=" * 50)
@@ -87,9 +78,9 @@ for k, inertia in zip(K_range, inertias):
     print(f"  K={k}: {inertia:.2f}")
 print("Best K = 5 (elbow point)")
 
-# ------------------------------------------------------------
+
 # STEP 5 — APPLY K-MEANS WITH K=5
-# ------------------------------------------------------------
+
 print("\n" + "=" * 50)
 print("STEP 5: APPLYING K-MEANS CLUSTERING (K=5)")
 print("=" * 50)
@@ -123,9 +114,9 @@ print(summary)
 print("\nCustomers per Cluster:")
 print(df["Cluster_Label"].value_counts())
 
-# ------------------------------------------------------------
+
 # STEP 6 — MATPLOTLIB CHARTS (Static)
-# ------------------------------------------------------------
+
 print("\n" + "=" * 50)
 print("STEP 6: CREATING CHARTS ...")
 print("=" * 50)
